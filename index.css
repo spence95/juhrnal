@@ -1,0 +1,56 @@
+body {
+  margin: 0px 75px;
+  font-family: "Lucida Console", Monaco, monospace
+  overflow: hidden;
+  background-color: #246C60;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0px;
+  font-family: "Lucida Console", Monaco, monospace
+}
+
+/*
+Theme colors:
+primary: 246C60
+  6CA299
+  43877C
+  0D5146
+  00362D
+secondary: AA8139
+  F5A3AD
+  CC6672
+  7A1420
+  52000A
+tertiary: A33643
+  FFE0AA
+  D4AE6A
+  805915
+  553600
+*/
+
+#bodyWrapper {
+  background-color: white;
+  padding: 10px 0px;
+  margin: 0px 125px;
+  margin-bottom: -5000px;
+  padding-bottom: 5000px;
+
+  -webkit-box-shadow: 0px -1px 21px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -1px 21px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px -1px 21px 0px rgba(0,0,0,0.75);
+}
+
+#titleWrapper {
+  background-color: white;
+  border-bottom: 1px solid #5E5E5E;
+  text-align: center;
+}
+
+
+#journalEntry {
+  height: 200px;
+  width: 100%;
+  font-size: 14pt;
+}
