@@ -6,21 +6,41 @@
     <link rel="stylesheet" type="text/css" href="index.css">
   </head>
   <body>
-    <div id="bodyWrapper">
+    <div id="menu">
       <div id="titleWrapper">
         <h1>JUHRNAL</h1>
       </div>
+      <div class="sideButton activeSB"><p>New Entry</p></div>
+      <div class="sideButton"><p>History</p></div>
+      <div class="sideButton"><p>Settings</p></div>
+    </div>
+    <div id="bodyWrapper">
 
-      <!-- http://fivera.net/paper-text-area-created-with-css-only-editable-example/ -->
-      <div class="paper">
-          <div class="paper-content">
-              <textarea id="journalEntry" autofocus></textarea>
+      <div id="newEntry">
+        <div class="paper">
+            <div class="paper-content">
+                <textarea id="journalEntry" autofocus></textarea>
+            </div>
+        </div>
+
+        <div id="entryManagement">
+          <div>
+            <button class="commonButton" id="insertPic">Insert Picture</button>
+            <button class="commonButton" id="attachAudio">Attach Audio</button>
           </div>
-
+          <div>
+            <button id="submitEntry">JUHRNAL IT</button>
+          </div>
+        </div>
       </div>
 
+      <div id="history">
+        <div id="entries">
+        </div>
+      </div>
 
-        <button  id="submitEntry">JUHRNAL IT</button>
+      <div id="settings">
+      </div>
 
       <footer>
         Notebook CSS by  <a href="http://codepen.io/MarcMalignan/" target="_blank">Marc Malignan</a> inspired by by Allan Peters
