@@ -11,18 +11,24 @@
         <h1>JUHRNAL</h1>
       </div>
 
-        <textarea id="journalEntry"/>
+      <!-- http://fivera.net/paper-text-area-created-with-css-only-editable-example/ -->
+      <div class="paper">
+          <div class="paper-content">
+              <textarea id="journalEntry" autofocus></textarea>
+          </div>
 
-        </textarea>
+      </div>
+
 
         <button  id="submitEntry">JUHRNAL IT</button>
 
-
-      <div id="bottomInfo">
-      We are using node <script>document.write(process.versions.node)</script>,
-      Chrome <script>document.write(process.versions.chrome)</script>,
-      and Electron <script>document.write(process.versions.electron)</script>.
-      </div>
+      <footer>
+        Notebook CSS by  <a href="http://codepen.io/MarcMalignan/" target="_blank">Marc Malignan</a> inspired by by Allan Peters
+        <br/>
+        We are using node <script>document.write(process.versions.node)</script>,
+        Chrome <script>document.write(process.versions.chrome)</script>,
+        and Electron <script>document.write(process.versions.electron)</script>.
+      </footer>
     </div>
     <script type="text/javascript" src="index.js"></script>
   </body>

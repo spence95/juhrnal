@@ -9,14 +9,18 @@ Database entry table has the following fields
 */
 var Datastore = require('nedb')
  , db = new Datastore({ filename: 'C:/Shadowmere/learning/journalingapp/main.db'});
-
+var entriesShownLimit = 10;
 
 //get all documents
 db.loadDatabase(function(err){
-  console.log(err);
-  db.find({username: 'spencer'}, function(err, entries){
-      console.log(docs);
-  });
+  if(!err){
+    db.find({username: 'spencer'})
+    .limit(entriesShownLimit).exec(function (err, entries) {
+      console.log(entries);
+    });
+  } else {
+    alert("Database retrieval error: " + err);
+  }
 });
 
 
