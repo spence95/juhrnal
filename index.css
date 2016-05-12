@@ -20,11 +20,18 @@ button {
   margin: 0px 5px;
   font-size: 16px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .commonButton{
   background-color: #A33643;
   color: white;
+}
+
+#commonButtons {
+  margin: 0px auto;
+  display:block;
+  width: 100%;
 }
 
 
@@ -61,7 +68,7 @@ tertiary: A33643
   padding: 5px;
   -webkit-border-radius: 10px 0px 0px 10px;
   border-radius: 10px 0px 0px 10px;
-  background-color: grey;
+  background-color: #246C60;
   cursor: pointer;
 }
 
@@ -81,7 +88,7 @@ tertiary: A33643
   padding: 10px 0px;
   margin: 0px 0px 0px 200px;
   margin-bottom: -5000px;
-  padding-bottom: 5000px;
+  padding-bottom: 100%;
 
   /*-webkit-box-shadow: 0px -1px 21px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px -1px 21px 0px rgba(0,0,0,0.75);
@@ -105,12 +112,54 @@ tertiary: A33643
 }
 
 #submitEntry {
-  background-color: #553600;
+  background-color: #246C60;
   color: white;
   margin-left: auto;
   margin-right: auto;
   display:block;
   width: 175px;
+}
+
+#history {
+  margin: 50px;
+}
+
+.entry{
+width: 100%;
+border: 1px solid gray;
+box-shadow: 1px 1px 3px #888;
+border-top: 20px solid #246C60;
+min-height: 250px;
+padding-: 10px;
+margin: 10px;
+background-color: white;
+}
+
+.entry img{
+  border-radius: 50%;
+  width: 70px;
+  margin: 10px;
+}
+
+.entry h1{
+  font-weight: lighter;
+  margin-left: 100px;
+  margin-top: -70px;
+}
+
+.entry p{
+  margin: 10px;
+  font-family: segoe ui;
+  line-height: 1.4em;
+  font-size: 1.2em;
+}
+
+#mainbox{
+  font-family: calibri;
+  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* Notebook CSS */

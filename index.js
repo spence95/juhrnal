@@ -14,6 +14,7 @@ var Datastore = require('nedb')
 
 
 document.getElementById("submitEntry").addEventListener("click", function (e) {
+  console.log(document.getElementById("journalEntry").value);
   var entry = {
     entryDate: new Date(),
     text: document.getElementById("journalEntry").value,
@@ -36,6 +37,7 @@ document.getElementById("submitEntry").addEventListener("click", function (e) {
       alert("Database error: " + err);
     }
   });
+  document.getElementById("journalEntry").value = "";
 });
 
 //new entry tab listener
@@ -88,11 +90,11 @@ function loadHistory(){
       db.find({username: 'spencer'}).sort({ entryDate: -1 })
       .limit(entriesShownLimit).exec(function (err, entries) {
         //populate entries
-        document.getElementById('history').innerHTML = "";
+        document.getElementById('mainbox').innerHTML = "";
         entries.forEach(function(entry){
-          document.getElementById('history').innerHTML += "<div class='entry'> \
+          document.getElementById('mainbox').innerHTML += "<div class='entry'> \
             <div class='entryDate'>" + entry.entryDate + "</div> \
-            <div class='entryText'>" + entry.text + "</div> \
+            <div class='entryText'><p>" + entry.text.replace(/\n/g, "</br>") + "</p></div> \
           </div>";
         });
       });
