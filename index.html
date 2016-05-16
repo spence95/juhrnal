@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='juhrnal'>
   <head>
     <meta charset="UTF-8">
     <title>JUHRNAL</title>
     <link rel="stylesheet" type="text/css" href="index.css">
   </head>
-  <body>
+  <body >
     <div id="menu">
       <div id="titleWrapper">
         <h1>JUHRNAL</h1>
@@ -14,7 +14,7 @@
       <div class="sideButton"><p>History</p></div>
       <div class="sideButton"><p>Settings</p></div>
     </div>
-    <div id="bodyWrapper">
+    <div id="bodyWrapper" ng-controller="newEntry">
 
       <div id="newEntry">
         <div class="paper">
@@ -27,9 +27,10 @@
           <div id="commonButtons">
             <button class="commonButton" id="insertPic">Insert Picture</button>
             <button class="commonButton" id="attachAudio">Attach Audio</button>
+            <input type="file" id="attachedFile" multiple />
           </div>
           <div>
-            <button id="submitEntry">JUHRNAL IT</button>
+            <button id="submitEntry" ng-click="submitEntry()">JUHRNAL IT</button>
           </div>
         </div>
       </div>
@@ -52,6 +53,7 @@
         and Electron <script>document.write(process.versions.electron)</script>.
       </footer>
     </div>
+    <script src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
